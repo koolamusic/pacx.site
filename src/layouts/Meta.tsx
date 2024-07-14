@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const SITE_URL = "https://faerisi.com";
+const SITE_URL = "https://sasdev.com";
 export type OpenGraphType = {
   siteName: string;
   description: string;
@@ -26,9 +26,9 @@ export interface SchemaOrgJLD {
 }
 
 const defaultMeta = {
-  title: "Faerisi",
-  siteName: "Be Visible",
-  description: "Be Visible",
+  title: "sasdev",
+  siteName: "Build a Stellar Reputation onchain",
+  description: "Build a Stellar Reputation onchain",
   url: `${SITE_URL}`,
   image: `${SITE_URL}/clip.png`,
   type: "website",
@@ -57,7 +57,7 @@ export default function Seo(props: SeoProps) {
       "@context": "http://schema.org",
       "@type": "WebSite",
       url: `${SITE_URL}`,
-      name: "Faerisi",
+      name: "sasdev",
       alternateName: props.projectTitle ? props.title : "",
     },
   ];

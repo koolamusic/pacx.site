@@ -13,10 +13,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Faerisi App</title>
+        <title>sasdev App</title>
         <meta
           name="description"
-          content="Be visible and unlock profitability"
+          content="Build a Stellar Reputation onchain and unlock profitability"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

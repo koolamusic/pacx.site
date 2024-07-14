@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900");
 /* @import url("https://rsms.me/inter/inter.css"); */
 
 * {
@@ -17,7 +17,7 @@ body,
 }
 
 .libre-baskerville-regular {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Big Shoulders Text", serif;
     font-style: normal;
 }
 
@@ -30,11 +30,12 @@ body,
 body {
     overscroll-behavior-y: none;
     /* font-family: "Inter var", sans-serif */
-    font-family: "Libre Baskerville", sans-serif;
+    font-family: "Big Shoulders Text", sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     color: #ddd;
-    background: #450a0b;
+    letter-spacing: 0.02em;
+    background: #0d0c0c;
     /* background: #441106; */
 }
 
@@ -50,7 +51,7 @@ svg {
 }
 
 h1 {
-    background: linear-gradient(30deg, #9d2e0f, #ffcc70);
+    background: linear-gradient(30deg, #119d0f, #ffcc70);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

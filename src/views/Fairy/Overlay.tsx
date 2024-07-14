@@ -1,5 +1,8 @@
 // import LogoComponent from "@/components/core/logo";
 import LogoGradientComponent from "@/components/core/logo-gradient";
+// import Heading from "@/theme/components/heading";
+import { Stack, chakra } from "@chakra-ui/react";
+import { ContainerIntro } from "./Card";
 
 export function Overlay() {
   return (
@@ -15,12 +18,14 @@ export function Overlay() {
     >
       <a
         className="big-shoulders-text-normal"
-        href="https://faerisi.com"
+        href="https://daccred.co"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{ position: "absolute", bottom: 40, left: 90, fontSize: "13px" }}
       >
-        media &
+        Immutable Labs
         <br />
-        pr company
+        & Research
       </a>
       <div
         style={{
@@ -30,39 +35,61 @@ export function Overlay() {
           transform: "translate3d(-50%,-50%,0)",
         }}
       >
-        <h1
-          className="show-xl libre-baskerville-regular"
+
+        <div
+          className="show-xl "
           style={{
             margin: 0,
             padding: 0,
             fontSize: "20em",
             fontWeight: 500,
-            letterSpacing: "-0.05em",
+            // letterSpacing: "0.05em",
           }}
         >
-          {/* Faerisi */}
-          {/* <LogoComponent /> */}
-          <LogoGradientComponent />
-        </h1>
+          <Stack align={'center'} >
+
+            <LogoGradientComponent />
+            <chakra.h2 color={'#ddd'} letterSpacing={3} fontSize={'4rem'} textTransform={'uppercase'} fontWeight={'700'} mt={0}>
+              Attestation Service
+            </chakra.h2>
+
+            <ContainerIntro />
+          </Stack>
+
+        </div>
+ 
+ {/* --------- embed the mobile viewport -------------- */}
         <h1
           className="show-md big-shoulders-text-normal"
           style={{
             margin: 0,
             padding: 0,
-            fontSize: "17em",
             fontWeight: 500,
-            lineHeight: "15rem",
-            letterSpacing: "-0.025em",
+            // lineHeight: "15rem",
           }}
         >
-          fae-risi
+          <Stack>
+
+            <LogoGradientComponent />
+            <chakra.h1 fontSize={'2.75rem'} textTransform={'uppercase'} fontWeight={'normal'} mt={-2}>
+              Attestation Service
+            </chakra.h1>
+
+          </Stack>
+
+
         </h1>
+        <Stack display={{ base: 'block', sm: 'none'}}>
+
+        <ContainerIntro />
+        </Stack>
+
       </div>
       <div
         className="big-shoulders-text-normal"
         style={{ position: "absolute", top: 40, left: 40, fontSize: "17px" }}
       >
-        BE VISIBLE —
+        S.A.S —
       </div>
       <div
         className="big-shoulders-text-normal"
@@ -73,7 +100,7 @@ export function Overlay() {
           fontSize: "17px",
         }}
       >
-        coming.soon
+        .github
       </div>
     </div>
   );

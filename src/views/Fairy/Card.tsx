@@ -38,7 +38,7 @@ export const ContainerIntro = () => (
               <br />
               <br />
 
-              <chakra.span>
+              <chakra.span display={{ base: "none", md: "inline" }}>
                 If this excites you, we&apos;d love to work with you. —{" "}
                 <chakra.a textDecoration={"underline"} href="#">
                   Andrew

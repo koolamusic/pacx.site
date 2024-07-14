@@ -1,47 +1,54 @@
 /* eslint-disable import/default */
-import React, { type ComponentPropsWithoutRef, forwardRef } from 'react';
-import { FormControl } from '@chakra-ui/form-control';
-import { type InputProps } from '@chakra-ui/input';
-import { Checkbox, FormErrorMessage, Text } from '@chakra-ui/react';
-import { useFormContext, Controller } from 'react-hook-form';
+import React, { type ComponentPropsWithoutRef, forwardRef } from "react";
+import { FormControl } from "@chakra-ui/form-control";
+import { type InputProps } from "@chakra-ui/input";
+import { Checkbox, FormErrorMessage, Text } from "@chakra-ui/react";
+import { useFormContext, Controller } from "react-hook-form";
 
 export interface LabeledTextFieldProps extends InputProps {
-    /** Field name. */
-    name: string;
-    label?: string;
-    props?: ComponentPropsWithoutRef<'input'>;
+  /** Field name. */
+  name: string;
+  label?: string;
+  props?: ComponentPropsWithoutRef<"input">;
 }
 
-const FormCheckbox = forwardRef<HTMLInputElement, LabeledTextFieldProps>(({ label, name, ...props }, ref) => {
+const FormCheckbox = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
+  ({ label, name, ...props }, ref) => {
     const {
-        control,
-        formState: { errors },
+      control,
+      formState: { errors },
     } = useFormContext();
     const error = Array.isArray(errors)
-        ? errors[name]?.message || Object.entries(errors[name]?.types || {})
-        : errors[name]?.message?.toString();
+      ? errors[name]?.message || Object.entries(errors[name]?.types || {})
+      : errors[name]?.message?.toString();
     const isErrorInField = errors[name] ? true : false;
 
     return (
-        <FormControl ref={ref} {...props} isInvalid={isErrorInField}>
-            <Controller
-                name={name}
-                control={control}
-                render={({ field }) => (
-                    <Checkbox {...field} onChange={(e) => field.onChange(e.target.checked)}>
-                        <Text fontSize="sm">{label ?? 'I agree to the Terms of use and Privacy Policy'}</Text>
-                    </Checkbox>
-                )}
-            />
-            {error && (
-                <FormErrorMessage fontSize="sm" role="alert" color="red.500">
-                    {String(error)}
-                </FormErrorMessage>
-            )}
-        </FormControl>
+      <FormControl ref={ref} {...props} isInvalid={isErrorInField}>
+        <Controller
+          name={name}
+          control={control}
+          render={({ field }) => (
+            <Checkbox
+              {...field}
+              onChange={(e) => field.onChange(e.target.checked)}
+            >
+              <Text fontSize="sm">
+                {label ?? "I agree to the Terms of use and Privacy Policy"}
+              </Text>
+            </Checkbox>
+          )}
+        />
+        {error && (
+          <FormErrorMessage fontSize="sm" role="alert" color="red.500">
+            {String(error)}
+          </FormErrorMessage>
+        )}
+      </FormControl>
     );
-});
+  },
+);
 
-FormCheckbox.displayName = 'FormCheckbox';
+FormCheckbox.displayName = "FormCheckbox";
 
 export default FormCheckbox;

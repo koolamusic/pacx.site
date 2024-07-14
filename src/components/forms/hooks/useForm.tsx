@@ -27,7 +27,7 @@ type FormProps = {
 type TSetErrorFunc = (
   name: string,
   error: ErrorOption,
-  options?: { shouldFocus: boolean } | undefined
+  options?: { shouldFocus: boolean } | undefined,
 ) => void;
 
 interface HookResponse<T extends FieldValues> extends UseFormReturn<T> {
@@ -73,12 +73,12 @@ const setFormErrorFactory = (setError: {
   (
     name: string,
     error: ErrorOption,
-    options?: { shouldFocus: boolean } | undefined
+    options?: { shouldFocus: boolean } | undefined,
   ): void;
   (
     name: string,
     error: ErrorOption,
-    options?: { shouldFocus: boolean } | undefined
+    options?: { shouldFocus: boolean } | undefined,
   ): void;
   (arg0: string, arg1: { type: string; message: any }): void;
 }) => {
@@ -121,7 +121,7 @@ const defaultFormParams = {
 };
 
 export default function useForm<T extends FieldValues>(
-  params: HookParams<T> = {}
+  params: HookParams<T> = {},
 ): HookResponse<T> {
   const [withDevTool, useDevTool] = React.useState(false);
   const {
@@ -170,7 +170,7 @@ export default function useForm<T extends FieldValues>(
     : // Would be undefined traditionally, but let's make this more developer friendly
       () =>
         console.error(
-          "You tried calling `submitForm` but forgot to set `onSubmit` callback for it"
+          "You tried calling `submitForm` but forgot to set `onSubmit` callback for it",
         );
 
   // pair with calling submit manually to prevent default form behaviour

@@ -42,7 +42,6 @@ function Stars(props) {
   );
 }
 
-
 function FloatingStars(props) {
   const ref = useRef();
   const [sphere] = useState(() =>

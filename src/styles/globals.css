@@ -10,8 +10,18 @@ a {
 html,
 body {
   -webkit-overflow-scrolling: touch;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
   scroll-behavior: smooth;
   font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
   font-feature-settings: "kern", "liga", "clig", "calt", "dlig";
@@ -42,7 +52,9 @@ body {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 30px rgba(117, 28, 10, 0.7), 0 0 5px rgba(237, 147, 89, 0.7);
+  box-shadow:
+    0 0 30px rgba(117, 28, 10, 0.7),
+    0 0 5px rgba(237, 147, 89, 0.7);
   opacity: 1;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   -ms-transform: rotate(3deg) translate(0px, -4px);

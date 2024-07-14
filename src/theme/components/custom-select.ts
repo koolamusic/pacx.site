@@ -1,10 +1,5 @@
-import type {
-  StyleFunctionProps} from "@chakra-ui/theme-tools";
-import {
-  getColor,
-  mode,
-  transparentize,
-} from "@chakra-ui/theme-tools";
+import type { StyleFunctionProps } from "@chakra-ui/theme-tools";
+import { getColor, mode, transparentize } from "@chakra-ui/theme-tools";
 
 const parts = ["field", "menu", "option"];
 
@@ -67,21 +62,21 @@ const variants = {
         borderColor: getColor(props.theme, mode("red.500", "red.300")(props)),
         boxShadow: `0 0 0 1px ${getColor(
           props.theme,
-          mode("red.500", "red.300")(props)
+          mode("red.500", "red.300")(props),
         )}`,
       },
       _focus: {
         borderColor: mode("brand.500", "brand.200")(props),
         boxShadow: mode(
           `0px 0px 0px 1px ${transparentize(`brand.500`, 1.0)(props.theme)}`,
-          `0px 0px 0px 1px ${transparentize(`brand.200`, 1.0)(props.theme)}`
+          `0px 0px 0px 1px ${transparentize(`brand.200`, 1.0)(props.theme)}`,
         )(props),
       },
       _expanded: {
         borderColor: mode("brand.500", "brand.200")(props),
         boxShadow: mode(
           `0px 0px 0px 1px ${transparentize(`brand.500`, 1.0)(props.theme)}`,
-          `0px 0px 0px 1px ${transparentize(`brand.200`, 1.0)(props.theme)}`
+          `0px 0px 0px 1px ${transparentize(`brand.200`, 1.0)(props.theme)}`,
         )(props),
       },
     },

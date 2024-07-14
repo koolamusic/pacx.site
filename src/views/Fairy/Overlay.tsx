@@ -24,8 +24,7 @@ export function Overlay() {
         style={{ position: "absolute", bottom: 40, left: 90, fontSize: "13px" }}
       >
         Immutable Labs
-        <br />
-        & Research
+        <br />& Research
       </a>
       <div
         style={{
@@ -35,7 +34,6 @@ export function Overlay() {
           transform: "translate3d(-50%,-50%,0)",
         }}
       >
-
         <div
           className="show-xl "
           style={{
@@ -46,19 +44,24 @@ export function Overlay() {
             // letterSpacing: "0.05em",
           }}
         >
-          <Stack align={'center'} >
-
+          <Stack align={"center"}>
             <LogoGradientComponent />
-            <chakra.h2 color={'#ddd'} letterSpacing={3} fontSize={'4rem'} textTransform={'uppercase'} fontWeight={'700'} mt={0}>
+            <chakra.h2
+              color={"#ddd"}
+              letterSpacing={3}
+              fontSize={"4rem"}
+              textTransform={"uppercase"}
+              fontWeight={"700"}
+              mt={0}
+            >
               Attestation Service
             </chakra.h2>
 
             <ContainerIntro />
           </Stack>
-
         </div>
- 
- {/* --------- embed the mobile viewport -------------- */}
+
+        {/* --------- embed the mobile viewport -------------- */}
         <h1
           className="show-md big-shoulders-text-normal"
           style={{
@@ -69,21 +72,20 @@ export function Overlay() {
           }}
         >
           <Stack>
-
             <LogoGradientComponent />
-            <chakra.h1 fontSize={'2.75rem'} textTransform={'uppercase'} fontWeight={'normal'} mt={-2}>
+            <chakra.h1
+              fontSize={"2.75rem"}
+              textTransform={"uppercase"}
+              fontWeight={"normal"}
+              mt={-2}
+            >
               Attestation Service
             </chakra.h1>
-
           </Stack>
-
-
         </h1>
-        <Stack display={{ base: 'block', sm: 'none'}}>
-
-        <ContainerIntro />
+        <Stack display={{ base: "block", sm: "none" }}>
+          <ContainerIntro />
         </Stack>
-
       </div>
       <div
         className="big-shoulders-text-normal"

@@ -1,10 +1,5 @@
-import type {
-  StyleFunctionProps} from "@chakra-ui/theme-tools";
-import {
-  darken,
-  mode,
-  transparentize,
-} from "@chakra-ui/theme-tools";
+import type { StyleFunctionProps } from "@chakra-ui/theme-tools";
+import { darken, mode, transparentize } from "@chakra-ui/theme-tools";
 
 const baseStyle = {
   textTransform: "normal",
@@ -36,13 +31,13 @@ const variants = {
   subtle: (props: StyleFunctionProps) => ({
     bg: mode(
       darken(`${props.colorScheme}.50`, 2)(props.theme),
-      transparentize(`${props.colorScheme}.200`, 0.16)(props.theme)
+      transparentize(`${props.colorScheme}.200`, 0.16)(props.theme),
     )(props),
   }),
   muted: (props: StyleFunctionProps) => ({
     bg: mode(
       darken(`white`, 2)(props.theme),
-      transparentize(`${props.colorScheme}.200`, 0.16)(props.theme)
+      transparentize(`${props.colorScheme}.200`, 0.16)(props.theme),
     )(props),
   }),
 };

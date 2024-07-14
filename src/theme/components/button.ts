@@ -47,7 +47,7 @@ const variants = {
     _hover: {
       bg: mode(
         darken("gray.50", 1)(props.theme),
-        transparentize("gray.700", 0.4)(props.theme)
+        transparentize("gray.700", 0.4)(props.theme),
       )(props),
     },
     _checked: {
@@ -62,13 +62,13 @@ const variants = {
     _hover: {
       bg: mode(
         darken("gray.50", 1)(props.theme),
-        darken("gray.700", 4)(props.theme)
+        darken("gray.700", 4)(props.theme),
       )(props),
     },
     _active: {
       bg: mode(
         darken("gray.50", 1)(props.theme),
-        darken("gray.700", 4)(props.theme)
+        darken("gray.700", 4)(props.theme),
       )(props),
     },
     _activeLink: {
@@ -101,19 +101,19 @@ const variants = {
     return {
       color: mode(
         `${props.colorScheme}.600`,
-        `${props.colorScheme}.200`
+        `${props.colorScheme}.200`,
       )(props),
       _hover: {
         color: mode(
           `${props.colorScheme}.700`,
-          `${props.colorScheme}.300`
+          `${props.colorScheme}.300`,
         )(props),
         textDecoration: "none",
       },
       _active: {
         color: mode(
           `${props.colorScheme}.700`,
-          `${props.colorScheme}.300`
+          `${props.colorScheme}.300`,
         )(props),
       },
     };

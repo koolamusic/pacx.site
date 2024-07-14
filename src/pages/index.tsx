@@ -14,7 +14,7 @@ export default function Page() {
         <title>Stellar Attestation Service</title>
         <meta
           name="description"
-          content="Build a Stellar Reputation onchain and unlock profitability"
+          content="Build Stellar Reputations onchain with Soroban smart contracts"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

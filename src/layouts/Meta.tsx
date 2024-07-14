@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const SITE_URL = "https://sasdev.com";
+const SITE_URL = "https://sasdev.xyz";
 export type OpenGraphType = {
   siteName: string;
   description: string;
@@ -27,8 +27,8 @@ export interface SchemaOrgJLD {
 
 const defaultMeta = {
   title: "sasdev",
-  siteName: "Build a Stellar Reputation onchain",
-  description: "Build a Stellar Reputation onchain",
+  siteName: "Build Stellar Reputations onchain",
+  description: "Build Stellar Reputations onchain",
   url: `${SITE_URL}`,
   image: `${SITE_URL}/clip.png`,
   type: "website",

@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <title>sasdev App</title>
         <meta
           name="description"
-          content="Build a Stellar Reputation onchain and unlock profitability"
+          content="Build Stellar Reputations onchain and unlock profitability"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

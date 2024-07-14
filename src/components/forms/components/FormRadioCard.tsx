@@ -161,6 +161,7 @@ const FormRadioCard = forwardRef<HTMLInputElement, FormRadioCardProps>(
           render={({ field }) => (
             // @ts-ignore
             <RadioCardGroup
+            // @ts-expect-error we dont know the type
               defaultValue={options[0].value}
               spacing="3"
               {...field}

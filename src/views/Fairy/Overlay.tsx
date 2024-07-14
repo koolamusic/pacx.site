@@ -88,7 +88,7 @@ export function Overlay() {
         </Stack>
       </div>
       <div
-        className="big-shoulders-text-normal"
+        className="show-xl big-shoulders-text-normal"
         style={{ position: "absolute", top: 40, left: 40, fontSize: "17px" }}
       >
         S.A.S —

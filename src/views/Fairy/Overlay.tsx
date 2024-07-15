@@ -18,7 +18,7 @@ export function Overlay() {
     >
       <a
         className="big-shoulders-text-normal"
-        href="https://daccred.co"
+        href="https://daccred.xyz"
         target="_blank"
         rel="noopener noreferrer"
         style={{ position: "absolute", bottom: 40, left: 90, fontSize: "13px" }}

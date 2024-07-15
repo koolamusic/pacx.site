@@ -45,7 +45,11 @@ export const ContainerIntro = () => (
                 </chakra.a>
                 ,{" "}
                 <chakra.a textDecoration={"underline"} href="#">
-                  Justice
+                  Mahine
+                </chakra.a>{" "}
+                ,{" "}
+                <chakra.a textDecoration={"underline"} href="#">
+                  Cyndie
                 </chakra.a>{" "}
                 and the entire{" "}
                 <chakra.a textDecoration={"underline"} href="#">

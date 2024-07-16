@@ -17,15 +17,15 @@ export const ContainerIntro = () => (
               textTransform={"uppercase"}
               fontWeight="400"
             >
-              Smart Trust Infrastructure
+              Unified Trust Framework
             </Text>
             <Text fontSize={"14px"} fontFamily={"accent"} color="muted">
               <chakra.span>
-                We&apos;re engineering a trust infrastructure for the on-chain
+                We&apos;re engineering a trust infrastructure for the <b>onchain</b>
                 economy. To start, we are building the Stellar Attestation
-                Service (SAS), an infrastructure framework that leverages
-                Soroban smart contracts to provide a secure framework for
-                attesting to digital interactions on the Stellar network.
+                Service (SAS), a framework that leverages
+                Soroban smart contracts to provide secure and transparent attestations to
+                digital interactions on the Stellar network.
               </chakra.span>
               <chakra.span display={{ base: "none", md: "inline" }}>
                 <br />

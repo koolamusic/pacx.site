@@ -1,5 +1,9 @@
 import { Box, chakra, Container, Stack, Text } from "@chakra-ui/react";
 
+// Define the mailTo variable with the desired subject and body
+const mailTo = `mailto:gm@daccred.co?subject=Collaborate on Stellar Attestation Service&body=Hi,%0D%0AI love SAS and would like to collaborate with your team.`;
+ 
+
 export const ContainerIntro = () => (
   <Box as="section" py={{ base: "4", md: "8" }}>
     <Container maxW="2xl">
@@ -40,19 +44,19 @@ export const ContainerIntro = () => (
 
               <chakra.span display={{ base: "none", md: "inline" }}>
                 If this excites you, we&apos;d love to work with you. —{" "}
-                <chakra.a textDecoration={"underline"} href="#">
+                <chakra.a textDecoration={"underline"} href={mailTo}>
                   Andrew
                 </chakra.a>
                 ,{" "}
-                <chakra.a textDecoration={"underline"} href="#">
+                <chakra.a textDecoration={"underline"} href={mailTo}>
                   Mahine
                 </chakra.a>{" "}
                 ,{" "}
-                <chakra.a textDecoration={"underline"} href="#">
+                <chakra.a textDecoration={"underline"} href={mailTo}>
                   Cyndie
                 </chakra.a>{" "}
                 and the entire{" "}
-                <chakra.a textDecoration={"underline"} href="#">
+                <chakra.a textDecoration={"underline"} href={mailTo}>
                   Daccred team
                 </chakra.a>
               </chakra.span>

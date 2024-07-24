@@ -93,7 +93,9 @@ export function Overlay() {
       >
         S.A.S —
       </div>
-      <div
+      <a
+      href="https://github.com/daccred/sas"
+      target={'_blank'}
         className="big-shoulders-text-normal"
         style={{
           position: "absolute",
@@ -103,7 +105,7 @@ export function Overlay() {
         }}
       >
         .github
-      </div>
+      </a>
     </div>
   );
 }

@@ -96,6 +96,7 @@ export function Overlay() {
       <a
         href="https://github.com/daccred/sas"
         target={'_blank'}
+        rel="noreferrer"
         className="big-shoulders-text-normal"
         style={{
           position: "absolute",

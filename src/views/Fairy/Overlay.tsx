@@ -94,8 +94,8 @@ export function Overlay() {
         S.A.S —
       </div>
       <a
-      href="https://github.com/daccred/sas"
-      target={'_blank'}
+        href="https://github.com/daccred/sas"
+        target={'_blank'}
         className="big-shoulders-text-normal"
         style={{
           position: "absolute",

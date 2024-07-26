@@ -1,5 +1,4 @@
 // import LogoComponent from "@/components/core/logo";
-import LogoGradientComponent from "@/components/core/logo-gradient";
 // import Heading from "@/theme/components/heading";
 import { Stack, chakra } from "@chakra-ui/react";
 import { ContainerIntro } from "./Card";
@@ -16,21 +15,13 @@ export function Overlay() {
         height: "100%",
       }}
     >
-      <a
-        className="big-shoulders-text-normal"
-        href="https://daccred.xyz"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ position: "absolute", bottom: 40, left: 90, fontSize: "13px" }}
-      >
-        Pacx Labs
-        <br /> Cairo scratch
-      </a>
+
       <div
         style={{
           position: "absolute",
           top: "calc(100vh - 280px)",
           left: "50%",
+          width: '100%',
           transform: "translate3d(-50%,-50%,0)",
         }}
       >
@@ -53,16 +44,11 @@ export function Overlay() {
 
         {/* --------- embed the mobile viewport -------------- */}
  
-        <Stack display={{ base: "block", sm: "none" }}>
+        <Stack display={{ base: "block", sm: "none" }} w={'full'}>
           <ContainerIntro />
         </Stack>
       </div>
-      {/* <div
-        className="show-xl big-shoulders-text-normal"
-        style={{ position: "absolute", top: 40, left: 40, fontSize: "17px" }}
-      >
-        S.A.S —
-      </div> */}
+   
       <a
         href="https://github.com/daccred/sas"
         target={'_blank'}

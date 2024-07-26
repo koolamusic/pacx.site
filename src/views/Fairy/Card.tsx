@@ -21,7 +21,7 @@ export const ContainerIntro = () => (
               textTransform={"uppercase"}
               fontWeight="400"
             >
-              Unified Trust Framework
+              Scratch for Cairo Smart Contracts
             </Text>
             <Text fontSize={"14px"} fontFamily={"accent"} color="muted">
               <chakra.span>
@@ -42,7 +42,7 @@ export const ContainerIntro = () => (
               <br />
               <br />
 
-              <chakra.span display={{ base: "none", md: "inline" }}>
+              <chakra.span>
                 If this excites you, we&apos;d love to work with you. —{" "}
                 <chakra.a textDecoration={"underline"} href={mailTo}>
                   Andrew

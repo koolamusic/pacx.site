@@ -16,16 +16,7 @@ body,
   overflow: hidden;
 }
 
-.libre-baskerville-regular {
-  font-family: "Big Shoulders Text", serif;
-  font-style: normal;
-}
 
-.big-shoulders-text-normal {
-  font-family: "Big Shoulders Text", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
 
 body {
   overscroll-behavior-y: none;
@@ -72,4 +63,14 @@ h1 {
   .show-xl {
     display: none;
   }
+}
+.libre-baskerville-regular {
+  font-family: "Big Shoulders Text", serif;
+  font-style: normal;
+}
+
+.big-shoulders-text-normal {
+  font-family: "Big Shoulders Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }

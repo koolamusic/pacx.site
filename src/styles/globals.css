@@ -1,14 +1,13 @@
-a {
-  color: inherit;
-  text-decoration: none;
-}
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900");
 
 * {
   box-sizing: border-box;
 }
 
 html,
-body {
+body,
+#root {
   -webkit-overflow-scrolling: touch;
   font-family:
     -apple-system,
@@ -26,12 +25,25 @@ body {
   font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
   font-feature-settings: "kern", "liga", "clig", "calt", "dlig";
   font-kerning: normal;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  overflow: hidden;
+}
+
+#root {
+  overflow: auto;
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  background: #f0f0f0;
 }
+
 #nprogress {
   pointer-events: none;
 }
@@ -91,4 +103,44 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+svg {
+  fill: #ddd;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  background: linear-gradient(30deg, #119d0f, #ffcc70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.show-md {
+  display: none;
+}
+
+.show-xl {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .show-md {
+    display: block;
+  }
+
+  .show-xl {
+    display: none;
+  }
+}
+.libre-baskerville-regular {
+  font-family: "Big Shoulders Text", serif;
+  font-style: normal;
+}
+
+.big-shoulders-text-normal {
+  font-family: "Big Shoulders Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }

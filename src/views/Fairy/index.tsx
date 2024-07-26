@@ -11,15 +11,13 @@ const Convas = dynamic(() => import("./GTLF"), {
 export function App() {
   return (
     <>
-    {/* <GTLFConvas /> */}
-    <Convas />
+    <GTLFConvas />
     {/* <Fairy /> */}
-      {/* <Overlay />
+      <Overlay />
       <LogoIconGrayscaleDark
         h={"44px"}
         style={{ position: "absolute", bottom: 40, left: 40, width: 30 }}
-      /> */}
-      {/* <Logo style={{ position: "absolute", bottom: 40, left: 40, width: 30 }} /> */}
+      />
     </>
   );
 }

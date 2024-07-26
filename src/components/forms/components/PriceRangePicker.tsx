@@ -13,7 +13,7 @@ export const PriceRangePicker = (props: RangeSliderProps) => {
       colorScheme="blue"
       step={10}
       aria-label={["minimum price", "maximum price"]}
-      {...props}
+      // {...props}
     >
       <RangeSliderTrack>
         <RangeSliderFilledTrack />

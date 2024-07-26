@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useEffect } from "react"
 import { Canvas, extend, useFrame } from "@react-three/fiber"
-import { useGLTF, useAnimations, meshBounds as mesh, useScroll, ScrollControls } from "@react-three/drei"
+import { useGLTF, useAnimations, 
+  // meshBounds as mesh, 
+  useScroll, ScrollControls } from "@react-three/drei"
 import { EffectComposer, TiltShift2 } from "@react-three/postprocessing"
 
 

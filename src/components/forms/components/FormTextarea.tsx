@@ -51,7 +51,7 @@ export const FormTextarea = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
           _focus={{ borderColor: "primary" }}
           disabled={isSubmitting}
           {...register(name)}
-          {...props}
+          // {...props}
         />
         {error && (
           <FormErrorMessage fontSize="sm" role="alert" color="red.500">

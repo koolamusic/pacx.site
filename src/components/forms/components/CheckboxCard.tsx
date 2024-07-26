@@ -37,7 +37,7 @@ export const FormCheckboxCardGroup = (props: CheckboxCardGroupProps) => {
     [children, getCheckboxProps],
   );
 
-  return <Stack {...rest}>{cards}</Stack>;
+  return <Stack  >{cards}</Stack>;
 };
 
 interface RadioCardProps extends BoxProps {

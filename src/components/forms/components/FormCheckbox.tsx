@@ -24,7 +24,7 @@ const FormCheckbox = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
     const isErrorInField = errors[name] ? true : false;
 
     return (
-      <FormControl ref={ref} {...props} isInvalid={isErrorInField}>
+      <FormControl ref={ref} isInvalid={isErrorInField}>
         <Controller
           name={name}
           control={control}

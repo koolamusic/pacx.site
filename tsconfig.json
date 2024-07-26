@@ -20,6 +20,6 @@
       "@/*": ["src/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "src/views/Fairy/GTLF.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "src/views/Fairy/GTLF.tsx"],
   "exclude": ["node_modules"]
 }

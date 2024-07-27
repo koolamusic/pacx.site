@@ -1,4 +1,4 @@
-import React, { type FC } from "react";
+import React, { type FC } from 'react'
 import {
   Center,
   Flex,
@@ -10,130 +10,105 @@ import {
   type IconButtonProps,
   Text,
   useControllableState,
-  type UseControllableStateProps,
-} from "@chakra-ui/react";
-import { FiMinus, FiPlus } from "react-icons/fi";
+  type UseControllableStateProps
+} from '@chakra-ui/react'
+import { FiMinus, FiPlus } from 'react-icons/fi'
 
 /* Hook into react hook forms */
-import { useFormContext, useController, type Control } from "react-hook-form";
+import { useFormContext, useController, type Control } from 'react-hook-form'
 
 interface FieldErrorProps {
-  name?: string;
+  name?: string
 }
 
 const QuantityPickerButton = (props: IconButtonProps) => (
   <IconButton
-    colorScheme={"orange"}
+    colorScheme={'orange'}
     size="md"
     aria-label="quantity-picker"
     fontSize="md"
-    _focus={{ boxShadow: "none" }}
-    _focusVisible={{ boxShadow: "outline" }}
+    _focus={{ boxShadow: 'none' }}
+    _focusVisible={{ boxShadow: 'outline' }}
     // {...props}
   />
-);
+)
 
 export const FieldError: FC<FieldErrorProps> = ({ name }) => {
   const {
-    formState: { errors },
-  } = useFormContext();
+    formState: { errors }
+  } = useFormContext()
 
   if (!name) {
-    return null;
+    return null
   }
 
-  const error = errors[name];
+  const error = errors[name]
 
   if (!error) {
-    return null;
+    return null
   }
 
-  return <FormErrorMessage>{error.message as any}</FormErrorMessage>;
-};
+  return <FormErrorMessage>{error.message as any}</FormErrorMessage>
+}
 
 interface FormQuantityPickerProps extends UseControllableStateProps<number> {
-  max?: number;
-  min?: number;
-  name: string;
-  label?: string;
+  max?: number
+  min?: number
+  name: string
+  label?: string
   /** control for useFormHook */
-  control?: Control;
-  required: boolean;
-  rootProps?: FormControlProps;
+  control?: Control
+  required: boolean
+  rootProps?: FormControlProps
 }
 
 export const FormQuantityPicker: FC<FormQuantityPickerProps> = (props) => {
-  const {
-    min = 1,
-    max,
-    name,
-    label,
-    required,
-    control,
-    rootProps,
-    ...rest
-  } = props;
-  const [value, setValue] = useControllableState(rest);
+  const { min = 1, max, name, label, required, control, rootProps, ...rest } = props
+  const [value, setValue] = useControllableState(rest)
 
   // const { register, setValue: setFormValue } = useFormContext()
 
   const { field } = useController({
     name,
     control,
-    rules: { required: required },
-  });
+    rules: { required: required }
+  })
 
   const handleDecrement = () => {
-    const decrementValue = value === min ? value : value - 1;
-    setValue(decrementValue);
-    field.onChange(decrementValue);
+    const decrementValue = value === min ? value : value - 1
+    setValue(decrementValue)
+    field.onChange(decrementValue)
     // setFormValue(name, decrementValue)
-  };
+  }
   const handleIncrement = () => {
-    const incrementValue = value === max ? value : value + 1;
-    setValue(incrementValue);
-    field.onChange(incrementValue);
+    const incrementValue = value === max ? value : value + 1
+    setValue(incrementValue)
+    field.onChange(incrementValue)
 
     // setFormValue(name, incrementValue)
-  };
+  }
 
   return (
-    <FormControl   {...field}>
+    <FormControl {...field}>
       {label && (
         <FormLabel fontSize="sm" fontWeight="medium">
           {label}
         </FormLabel>
       )}
-      <Flex
-        borderRadius="xl"
-        px="2"
-        py={2}
-        borderWidth="1px"
-        justifyContent="space-between"
-      >
-        <QuantityPickerButton
-          onClick={handleDecrement}
-          icon={<FiMinus />}
-          isDisabled={value === min}
-          aria-label="Decrement"
-        />
+      <Flex borderRadius="xl" px="2" py={2} borderWidth="1px" justifyContent="space-between">
+        <QuantityPickerButton onClick={handleDecrement} icon={<FiMinus />} isDisabled={value === min} aria-label="Decrement" />
         <Center minW="8">
           <Text as="span" fontWeight="semibold" userSelect="none">
             {value}
           </Text>
         </Center>
-        <QuantityPickerButton
-          onClick={handleIncrement}
-          icon={<FiPlus />}
-          isDisabled={value === max}
-          aria-label="Increment"
-        />
+        <QuantityPickerButton onClick={handleIncrement} icon={<FiPlus />} isDisabled={value === max} aria-label="Increment" />
       </Flex>
       <FieldError name={name} />
     </FormControl>
-  );
-};
+  )
+}
 
-FormQuantityPicker.displayName = "FormQuantityPicker";
+FormQuantityPicker.displayName = 'FormQuantityPicker'
 
-export default FormQuantityPicker;
+export default FormQuantityPicker

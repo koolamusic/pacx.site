@@ -1,18 +1,17 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { useEffect } from "react"
-import { Canvas, extend, useFrame } from "@react-three/fiber"
-import { useGLTF, useAnimations, meshBounds as mesh, useScroll, softShadows, ScrollControls } from "@react-three/drei"
-import { EffectComposer, TiltShift2 } from "@react-three/postprocessing"
-import { PlaneBufferGeometry, Mesh, ShadowMaterial } from "three"
+import { useEffect } from 'react'
+import { Canvas, extend, useFrame } from '@react-three/fiber'
+import { useGLTF, useAnimations, meshBounds as mesh, useScroll, softShadows, ScrollControls } from '@react-three/drei'
+import { EffectComposer, TiltShift2 } from '@react-three/postprocessing'
+import { PlaneBufferGeometry, Mesh, ShadowMaterial } from 'three'
 
 // import { OrbitControls, TransformControls } from 'three-stdlib'
 // extend({ OrbitControls, TransformControls, Mesh, PlaneBufferGeometry, ShadowMaterial })
 
-
 export const MainRender = () => (
   <Canvas shadows gl={{ antialias: false }} camera={{ position: [1, 0.5, 2.5], fov: 50 }}>
-    <color attach="background" args={["#dfdfdf"]} />
-    <fog attach="fog" args={["#f0f0f0", 0, 20]} />
+    <color attach="background" args={['#dfdfdf']} />
+    <fog attach="fog" args={['#f0f0f0', 0, 20]} />
     <ambientLight intensity={0.5} />
     <directionalLight intensity={2} position={[-5, 5, 5]} castShadow shadow-mapSize={2048} shadow-bias={-0.0001} />
     {/* @ts-ignore */}
@@ -22,7 +21,7 @@ export const MainRender = () => (
     <mesh rotation={[-0.5 * Math.PI, 0, 0]} position={[0, -1.01, 0]} receiveShadow>
       {/* <planeBufferGeometry args={[10, 10, 1, 1]} /> */}
       {/* <shadowMaterial transparent opacity={0.75} /> */}
-  {/* <softShadows size={40} samples={16} /> */}
+      {/* <softShadows size={40} samples={16} /> */}
     </mesh>
     {/* <mesh
   visible
@@ -31,16 +30,13 @@ export const MainRender = () => (
 /> */}
     <EffectComposer disableNormalPass multisampling={4}>
       <TiltShift2 blur={1} />
-      
     </EffectComposer>
   </Canvas>
 )
 
-
-
-function Model(props:any) {
+function Model(props: any) {
   const scroll = useScroll()
-  const { nodes, materials, animations } = useGLTF("/jump-transformed.glb")
+  const { nodes, materials, animations } = useGLTF('/jump-transformed.glb')
   const { ref, actions } = useAnimations(animations)
   useEffect(() => {
     if (actions.jump) {
@@ -56,14 +52,14 @@ function Model(props:any) {
     <group {...props} ref={ref}>
       {/* @ts-ignore */}
       <primitive object={nodes?.mixamorigHips} />
-      <skinnedMesh 
-        castShadow 
-        receiveShadow 
+      <skinnedMesh
+        castShadow
+        receiveShadow
         // @ts-ignore
-        geometry={nodes?.Ch03?.geometry} 
-        material={materials?.Ch03_Body} 
+        geometry={nodes?.Ch03?.geometry}
+        material={materials?.Ch03_Body}
         // @ts-ignore
-        skeleton={nodes?.Ch03?.skeleton} 
+        skeleton={nodes?.Ch03?.skeleton}
       />
     </group>
   )

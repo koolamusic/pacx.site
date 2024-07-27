@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900");
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900');
 /* @import url("https://rsms.me/inter/inter.css"); */
 
 * {
@@ -16,16 +16,14 @@ body,
   overflow: hidden;
 }
 
-
-
 body {
   overscroll-behavior-y: none;
   position: fixed;
-  cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iI0U4QjA1OSIvPjwvc3ZnPg=="),
-  auto;
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iI0U4QjA1OSIvPjwvc3ZnPg=='),
+    auto;
   overflow: hidden;
   background: #f0f0f0;
-  font-family: "Big Shoulders Text", sans-serif;
+  font-family: 'Big Shoulders Text', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.02em;
@@ -66,12 +64,12 @@ h1 {
   }
 }
 .libre-baskerville-regular {
-  font-family: "Big Shoulders Text", serif;
+  font-family: 'Big Shoulders Text', serif;
   font-style: normal;
 }
 
 .big-shoulders-text-normal {
-  font-family: "Big Shoulders Text", sans-serif;
+  font-family: 'Big Shoulders Text', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }

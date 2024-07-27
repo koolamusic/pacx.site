@@ -1,5 +1,5 @@
 export default {
   baseStyle: {
-    opacity: 1,
-  },
-};
+    opacity: 1
+  }
+}

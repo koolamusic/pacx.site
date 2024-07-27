@@ -9,19 +9,19 @@ import {
   type UseCheckboxGroupProps,
   type UseCheckboxProps,
   useId,
-  useStyleConfig,
-} from "@chakra-ui/react";
-import * as React from "react";
+  useStyleConfig
+} from '@chakra-ui/react'
+import * as React from 'react'
 
-type CheckboxCardGroupProps = StackProps & UseCheckboxGroupProps;
+type CheckboxCardGroupProps = StackProps & UseCheckboxGroupProps
 
 export const FormCheckboxCardGroup = (props: CheckboxCardGroupProps) => {
-  const { children, defaultValue, value, onChange, ...rest } = props;
+  const { children, defaultValue, value, onChange, ...rest } = props
   const { getCheckboxProps } = useCheckboxGroup({
     defaultValue,
     value,
-    onChange,
-  });
+    onChange
+  })
 
   const cards = React.useMemo(
     () =>
@@ -30,27 +30,26 @@ export const FormCheckboxCardGroup = (props: CheckboxCardGroupProps) => {
         .map((card) => {
           return React.cloneElement(card, {
             checkboxProps: getCheckboxProps({
-              value: card.props.value,
-            }),
-          });
+              value: card.props.value
+            })
+          })
         }),
-    [children, getCheckboxProps],
-  );
+    [children, getCheckboxProps]
+  )
 
-  return <Stack>{cards}</Stack>;
-};
+  return <Stack>{cards}</Stack>
+}
 
 interface RadioCardProps extends BoxProps {
-  value: string;
-  checkboxProps?: UseCheckboxProps;
+  value: string
+  checkboxProps?: UseCheckboxProps
 }
 
 export const FormCheckboxCard = (props: RadioCardProps) => {
-  const { checkboxProps, children, ...rest } = props;
-  const { getInputProps, getCheckboxProps, getLabelProps, state } =
-    useCheckbox(checkboxProps);
-  const id = useId(undefined, "checkbox-card");
-  const styles = useStyleConfig("RadioCard", props);
+  const { checkboxProps, children, ...rest } = props
+  const { getInputProps, getCheckboxProps, getLabelProps, state } = useCheckbox(checkboxProps)
+  const id = useId(undefined, 'checkbox-card')
+  const styles = useStyleConfig('RadioCard', props)
 
   return (
     <Box
@@ -58,24 +57,19 @@ export const FormCheckboxCard = (props: RadioCardProps) => {
       cursor="pointer"
       {...getLabelProps()}
       sx={{
-        ".focus-visible + [data-focus]": {
-          boxShadow: "outline",
-          zIndex: 1,
-        },
+        '.focus-visible + [data-focus]': {
+          boxShadow: 'outline',
+          zIndex: 1
+        }
       }}
     >
       <input {...getInputProps()} aria-labelledby={id} />
       <Box sx={styles} {...getCheckboxProps()} {...rest}>
         <Stack direction="row">
           <Box flex="1">{children}</Box>
-          <Checkbox
-            pointerEvents="none"
-            isFocusable={false}
-            isChecked={state.isChecked}
-            alignSelf="start"
-          />
+          <Checkbox pointerEvents="none" isFocusable={false} isChecked={state.isChecked} alignSelf="start" />
         </Stack>
       </Box>
     </Box>
-  );
-};
+  )
+}

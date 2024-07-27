@@ -1,7 +1,7 @@
 import { Box, Button, chakra, Container, Stack, Text } from '@chakra-ui/react'
 
 // Define the mailTo variable with the desired subject and body
-const mailTo = `mailto:gm@daccred.co?subject=Collaborate on Stellar Attestation Service&body=Hi,%0D%0AI love SAS and would like to collaborate with your team.`
+const mailTo = `mailto:pacxlabs@googlegroups.com?subject=Collaborate on Stellar Attestation Service&body=Hi,%0D%0AI love SAS and would like to collaborate with your team.`
 
 export const ContainerIntro = () => (
   <Box as="section" py={{ base: '4', md: '8' }}>

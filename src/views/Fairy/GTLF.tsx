@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useEffect } from "react"
 import { Canvas, extend, useFrame } from "@react-three/fiber"
 import { useGLTF, useAnimations, meshBounds as mesh, useScroll, softShadows, ScrollControls } from "@react-three/drei"
 import { EffectComposer, TiltShift2 } from "@react-three/postprocessing"
 import { PlaneBufferGeometry, Mesh, ShadowMaterial } from "three"
 
-import { OrbitControls, TransformControls } from 'three-stdlib'
-extend({ OrbitControls, TransformControls, Mesh, PlaneBufferGeometry, ShadowMaterial })
+// import { OrbitControls, TransformControls } from 'three-stdlib'
+// extend({ OrbitControls, TransformControls, Mesh, PlaneBufferGeometry, ShadowMaterial })
 
 
 export const MainRender = () => (
@@ -14,10 +15,11 @@ export const MainRender = () => (
     <fog attach="fog" args={["#f0f0f0", 0, 20]} />
     <ambientLight intensity={0.5} />
     <directionalLight intensity={2} position={[-5, 5, 5]} castShadow shadow-mapSize={2048} shadow-bias={-0.0001} />
+    {/* @ts-ignore */}
     <ScrollControls damping={0.33} maxSpeed={0.5} pages={2}>
       <Model position={[0, -1, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />
     </ScrollControls>
-    <mesh geometry={PlaneBufferGeometry} material={ShadowMaterial} rotation={[-0.5 * Math.PI, 0, 0]} position={[0, -1.01, 0]} receiveShadow>
+    <mesh rotation={[-0.5 * Math.PI, 0, 0]} position={[0, -1.01, 0]} receiveShadow>
       {/* <planeBufferGeometry args={[10, 10, 1, 1]} /> */}
       {/* <shadowMaterial transparent opacity={0.75} /> */}
   {/* <softShadows size={40} samples={16} /> */}
@@ -36,7 +38,7 @@ export const MainRender = () => (
 
 
 
-function Model(props) {
+function Model(props:any) {
   const scroll = useScroll()
   const { nodes, materials, animations } = useGLTF("/jump-transformed.glb")
   const { ref, actions } = useAnimations(animations)
@@ -52,12 +54,15 @@ function Model(props) {
   })
   return (
     <group {...props} ref={ref}>
+      {/* @ts-ignore */}
       <primitive object={nodes?.mixamorigHips} />
       <skinnedMesh 
         castShadow 
         receiveShadow 
+        // @ts-ignore
         geometry={nodes?.Ch03?.geometry} 
         material={materials?.Ch03_Body} 
+        // @ts-ignore
         skeleton={nodes?.Ch03?.skeleton} 
       />
     </group>

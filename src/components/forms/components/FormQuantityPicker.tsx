@@ -25,10 +25,11 @@ const QuantityPickerButton = (props: IconButtonProps) => (
   <IconButton
     colorScheme={"orange"}
     size="md"
+    aria-label="quantity-picker"
     fontSize="md"
     _focus={{ boxShadow: "none" }}
     _focusVisible={{ boxShadow: "outline" }}
-    {...props}
+    // {...props}
   />
 );
 
@@ -97,7 +98,7 @@ export const FormQuantityPicker: FC<FormQuantityPickerProps> = (props) => {
   };
 
   return (
-    <FormControl {...rootProps} {...field}>
+    <FormControl   {...field}>
       {label && (
         <FormLabel fontSize="sm" fontWeight="medium">
           {label}

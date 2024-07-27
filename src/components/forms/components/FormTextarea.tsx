@@ -35,7 +35,7 @@ export const FormTextarea = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
     const isErrorInField = errors[name] ? true : false;
 
     return (
-      <FormControl ref={ref} {...outerProps} isInvalid={isErrorInField}>
+      <FormControl ref={ref}  isInvalid={isErrorInField}>
         <Flex align="center" justify="space-between">
           {label && (
             <FormLabel color={"default"} fontSize="sm" {...labelProps}>
@@ -51,7 +51,7 @@ export const FormTextarea = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
           _focus={{ borderColor: "primary" }}
           disabled={isSubmitting}
           {...register(name)}
-          {...props}
+          // {...props}
         />
         {error && (
           <FormErrorMessage fontSize="sm" role="alert" color="red.500">

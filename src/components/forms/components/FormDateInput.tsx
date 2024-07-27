@@ -64,7 +64,7 @@ export const FormDateInput = forwardRef<
     const isErrorInField = errors[name] ? true : false;
 
     return (
-      <FormControl ref={ref} {...outerProps} isInvalid={isErrorInField}>
+      <FormControl ref={ref} isInvalid={isErrorInField}>
         {label && (
           <FormLabel color={"default"} fontSize="sm" {...labelProps}>
             {label}
@@ -87,7 +87,7 @@ export const FormDateInput = forwardRef<
             {...register(name, {
               valueAsDate: true,
             })}
-            {...props}
+            // {...props}
           />
           {rightElement && (
             <InputRightElement>

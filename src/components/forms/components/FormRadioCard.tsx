@@ -113,7 +113,7 @@ export const RadioCard = (props: RadioCardProps) => {
       }}
     >
       <chakra.input {...inputProps} aria-labelledby={id} />
-      <Box sx={styles} {...checkboxProps} {...rest}>
+      <Box sx={styles} {...checkboxProps}>
         <Stack direction="row">
           {state.isChecked ? (
             <Circle bg="emphasized" size="4">
@@ -161,7 +161,7 @@ const FormRadioCard = forwardRef<HTMLInputElement, FormRadioCardProps>(
           render={({ field }) => (
             // @ts-ignore
             <RadioCardGroup
-            // @ts-expect-error we dont know the type
+            // @ts-ignore
               defaultValue={options[0].value}
               spacing="3"
               {...field}
